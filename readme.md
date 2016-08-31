@@ -1,7 +1,7 @@
 # Gulp-SASS
 
-Use Gulp to compile sass files 
-@date: 2016
+Use Gulp to compile sass files <br>
+@date: 2016<br>
 @author: Anthony graule
 
 * nodejs and gulp must to be install before
