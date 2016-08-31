@@ -1,0 +1,21 @@
+{
+  "name": "gulpsass",
+  "version": "1.0.0",
+  "description": "compilation fichier sass en css",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "anthony graule",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-cssbeautify": "^0.1.3",
+    "gulp-csscomb": "^3.0.7",
+    "gulp-csso": "^2.0.0",
+    "gulp-load-plugins": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2"
+  }
+}
