@@ -5,6 +5,7 @@ Use Gulp to compile sass files <br>
 @author: Anthony graule
 
 * nodejs and gulp must to be install before
+* to install gulp : npm install gulp -g
 * Need a folder 'assets' containing two folders named 'css' and 'sass'
 * gulpfile.js must to be at the same assets level with package.json
 * Open nodejs command and use 'npm install' to install node_modules
