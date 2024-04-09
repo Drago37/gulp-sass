@@ -18,7 +18,7 @@ const rename = require('gulp-rename');
 const browserSync = require('browser-sync').create();
 
 /**
- * @description Permet de compiler tous les fichiers SCSS en CSS
+ * @description To compile scss files to css
  * @returns {PassThrough}
  */
 function sass() {
@@ -26,28 +26,24 @@ function sass() {
 }
 
 /**
- * @description Détecte les changements et compile en live en faisant appel à la méthode sass()
+ * @description Inspect changes and if there is changes then sass() called
  */
 function watch() {
     gulp.watch('sass/**/*.+(scss|sass)', sass);
 }
 
 /**
- * @description Détecte les changements et compile en live en faisant appel à la méthode sass() et recharge automatiquement
- * la page du navigateur. Il exécute aussi le reload JS
+ * @description Inspect changes and if there is changes then sass() called, and there is a hot reload of CSS and JS files.
  */
 function reload() {
     browserSync.init({
-        proxy: {target: 'https://www.lesjardinsdetouraine.fr'}
+        proxy: {target: 'https://www.demo.fr'}
     });
     gulp.watch('sass/**/*.+(scss|sass)').on('change', browserSync.reload);
     gulp.watch('../js/**/*.js').on('change', browserSync.reload);
 }
 
-/**
- * Définition des différentes tasks à appeler pour exécuter les commandes
- * @type {function(): PassThrough}
- */
+// exports
 exports.sass = sass;
 exports.watch = gulp.series(sass, watch);
 exports.reload = gulp.series(sass, reload);
